@@ -1,0 +1,318 @@
+/* Design System - SecureFlow */
+
+/* === Tokens de Cores === */
+:root {
+    --sf-primary: #667eea;
+    --sf-primary-dark: #5a6fd6;
+    --sf-primary-light: #8a96f0;
+    --sf-secondary: #764ba2;
+    --sf-success: #00d084;
+    --sf-warning: #fcb900;
+    --sf-danger: #cf2e2e;
+    --sf-info: #0693e3;
+    --sf-dark: #2d3748;
+    --sf-gray-100: #f5f7fa;
+    --sf-gray-200: #e2e8f0;
+    --sf-gray-300: #cbd5e0;
+    --sf-gray-400: #a0aec0;
+    --sf-gray-500: #718096;
+    --sf-gray-600: #4a5568;
+    --sf-gray-700: #2d3748;
+    --sf-gray-800: #1a202c;
+    --sf-white: #ffffff;
+}
+
+/* === Tipografia === */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--sf-gray-100);
+    color: var(--sf-gray-700);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    color: var(--sf-gray-800);
+}
+
+/* === Espaçamentos === */
+.sf-space-20 { --space: 0.44rem; }
+.sf-space-30 { --space: 0.67rem; }
+.sf-space-40 { --space: 1rem; }
+.sf-space-50 { --space: 1.5rem; }
+.sf-space-60 { --space: 2.25rem; }
+.sf-space-70 { --space: 3.38rem; }
+.sf-space-80 { --space: 5.06rem; }
+
+/* === Botões === */
+.sf-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.667rem 1.333rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.sf-btn-primary {
+    background: var(--sf-primary);
+    color: var(--sf-white);
+}
+
+.sf-btn-primary:hover {
+    background: var(--sf-primary-dark);
+    transform: translateY(-1px);
+}
+
+.sf-btn-secondary {
+    background: var(--sf-secondary);
+    color: var(--sf-white);
+}
+
+.sf-btn-success {
+    background: var(--sf-success);
+    color: var(--sf-white);
+}
+
+.sf-btn-warning {
+    background: var(--sf-warning);
+    color: var(--sf-gray-800);
+}
+
+.sf-btn-danger {
+    background: var(--sf-danger);
+    color: var(--sf-white);
+}
+
+.sf-btn-outline-primary {
+    background: transparent;
+    border: 1px solid var(--sf-primary);
+    color: var(--sf-primary);
+}
+
+.sf-btn-outline-primary:hover {
+    background: var(--sf-primary);
+    color: var(--sf-white);
+}
+
+/* === Cards === */
+.sf-card {
+    background: var(--sf-white);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+.sf-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sf-card-body {
+    padding: 1.5rem;
+}
+
+/* === Badges === */
+.sf-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.sf-badge-success {
+    background: var(--sf-success);
+    color: var(--sf-white);
+}
+
+.sf-badge-warning {
+    background: var(--sf-warning);
+    color: var(--sf-gray-800);
+}
+
+.sf-badge-danger {
+    background: var(--sf-danger);
+    color: var(--sf-white);
+}
+
+.sf-badge-info {
+    background: var(--sf-info);
+    color: var(--sf-white);
+}
+
+/* === Tabelas === */
+.sf-table {
+    width: 100%;
+    background: var(--sf-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.sf-table th {
+    background: var(--sf-gray-100);
+    padding: 1rem;
+    font-weight: 600;
+    text-align: left;
+}
+
+.sf-table td {
+    padding: 1rem;
+    border-top: 1px solid var(--sf-gray-200);
+}
+
+.sf-table tr:hover {
+    background: var(--sf-gray-100);
+}
+
+/* === Formulários === */
+.sf-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--sf-gray-300);
+    border-radius: 8px;
+    font-family: inherit;
+    transition: all 0.2s ease;
+}
+
+.sf-input:focus {
+    outline: none;
+    border-color: var(--sf-primary);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.sf-input-error {
+    border-color: var(--sf-danger);
+}
+
+.sf-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--sf-gray-700);
+}
+
+/* === Sidebar === */
+.sf-sidebar {
+    background: linear-gradient(135deg, var(--sf-primary) 0%, var(--sf-secondary) 100%);
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+
+.sf-sidebar .nav-link {
+    color: var(--sf-white);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.sf-sidebar .nav-link:hover,
+.sf-sidebar .nav-link.active {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* === Navbar === */
+.sf-navbar {
+    background: var(--sf-white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    padding: 1rem 1.5rem;
+}
+
+/* === Alertas === */
+.sf-alert {
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.sf-alert-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.sf-alert-danger {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.sf-alert-warning {
+    background: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+}
+
+/* === Icon Boxes === */
+.sf-icon-box {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.sf-icon-box-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1rem;
+    background: var(--sf-gray-100);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: var(--sf-primary);
+}
+
+.sf-icon-box-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* === Tabs === */
+.sf-tabs {
+    border-bottom: 1px solid var(--sf-gray-200);
+    margin-bottom: 1.5rem;
+}
+
+.sf-tab {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    font-weight: 500;
+    color: var(--sf-gray-500);
+    border-bottom: 2px solid transparent;
+}
+
+.sf-tab.active {
+    color: var(--sf-primary);
+    border-bottom-color: var(--sf-primary);
+}
+
+.sf-tab-content {
+    display: none;
+}
+
+.sf-tab-content.active {
+    display: block;
+}
+
+/* === Responsividade === */
+@media (max-width: 768px) {
+    .sf-sidebar {
+        min-height: auto;
+        padding: 1rem;
+    }
+    
+    .sf-sidebar .nav-link {
+        text-align: center;
+    }
+}
